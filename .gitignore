@@ -31,3 +31,9 @@ yarn-error.log
 # Database
 *.mongo
 mongod.lock
+
+# Test files (debugging scripts)
+test_*.cjs
+debug_*.cjs
+*_test.cjs
+*-test.cjs
