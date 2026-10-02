@@ -1,0 +1,7 @@
+Server running in development mode on port 5000
+MongoDB connection failed: bad auth : authentication failed
+Falling back to in-memory database (data resets on restart).
+In-memory MongoDB started: 127.0.0.1 (resets on restart)
+Seeded 14 sample menu items
+Created admin account: protimdattapartha@gmail.com
+Seeded 4 gallery images

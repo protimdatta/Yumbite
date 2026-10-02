@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Yumbite | Fast Food Restaurant in Cox's Bazar</title>
+    <meta name="description" content="Yumbite is a premium fast food restaurant in Cox's Bazar offering bold flavors, fresh ingredients, and memorable dining experiences. Bite Into Happiness." />
+    <meta name="keywords" content="Yumbite, fast food, restaurant, Cox's Bazar, burgers, chicken, wraps, food delivery" />
+    <meta name="author" content="Yumbite Restaurant" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yumbite.com" />
+    <meta property="og:title" content="Yumbite | Bite Into Happiness" />
+    <meta property="og:description" content="Premium fast food restaurant in Cox's Bazar. Bold flavors, fresh ingredients, good food made for good moments." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:site_name" content="Yumbite" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://yumbite.com" />
+    <meta name="twitter:title" content="Yumbite | Bite Into Happiness" />
+    <meta name="twitter:description" content="Premium fast food restaurant in Cox's Bazar." />
+    <meta name="twitter:image" content="/og-image.jpg" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Yumbite",
+      "description": "Premium fast food restaurant in Cox's Bazar offering bold flavors and fresh ingredients.",
+      "url": "https://yumbite.com",
+      "telephone": "+8801313886160",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Buddhist Temple Rd",
+        "addressLocality": "Cox's Bazar",
+        "addressCountry": "BD"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 21.4272,
+        "longitude": 92.0058
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "23:00"
+      },
+      "priceRange": "$$",
+      "servesCuisine": "Fast Food",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "2"
+      }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#090909" />
+    <script>
+      (() => {
+        let theme = '';
+        try {
+          theme = localStorage.getItem('yumbite-theme') || '';
+        } catch {
+          // Continue with the system preference when storage is unavailable.
+        }
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+        document.querySelector('meta[name="theme-color"]')?.setAttribute(
+          'content',
+          theme === 'dark' ? '#090909' : '#F9F8F5'
+        );
+      })();
+    </script>
+  </head>
+  <body class="bg-yumbite-black text-yumbite-white antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
